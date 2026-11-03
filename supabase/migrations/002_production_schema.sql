@@ -175,8 +175,7 @@ begin
 end $$;
 
 -- Enforce partial unique index on ledger_entries: one posting per provider payment transaction
-create unique index if not exists ledger_entries_posting_key_idx on public.ledger_entries (posting_key)
-  where posting_key is not null;
+create unique index if not exists ledger_entries_posting_key_idx on public.ledger_entries (posting_key);
 
 -- 10. Atomic Production Event Processor Function
 -- Handles:
