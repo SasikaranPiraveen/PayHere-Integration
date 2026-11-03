@@ -1,0 +1,22 @@
+:root { color-scheme: light dark; --bg:#fff; --fg:#111; --muted:#666; --line:#ddd; --card:#f7f7f8; --ok:#0a7d33; --bad:#b42318; --warn:#9a6700; }
+@media (prefers-color-scheme: dark) { :root { --bg:#0e0e10; --fg:#eee; --muted:#9a9aa2; --line:#2c2c31; --card:#18181b; --ok:#4ade80; --bad:#f87171; --warn:#fbbf24; } }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--fg); font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+header { display:flex; gap:16px; align-items:center; padding:12px 24px; border-bottom:1px solid var(--line); }
+header nav { display:flex; gap:16px; flex:1; }
+a { color:inherit; }
+main { max-width:960px; margin:0 auto; padding:24px; }
+h1 { font-size:22px; margin:0 0 12px; } h2 { font-size:17px; margin:24px 0 8px; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:16px; margin:12px 0; }
+.grid { display:grid; gap:12px; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); }
+input { width:100%; padding:8px; border:1px solid var(--line); border-radius:6px; background:var(--bg); color:var(--fg); margin:4px 0 10px; }
+button { padding:8px 14px; border-radius:6px; border:1px solid var(--line); background:var(--fg); color:var(--bg); cursor:pointer; font:inherit; }
+button:disabled { opacity:.5; cursor:not-allowed; }
+button.secondary { background:transparent; color:var(--fg); }
+table { width:100%; border-collapse:collapse; font-size:13px; }
+th,td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--line); vertical-align:top; }
+.muted { color:var(--muted); } .err { color:var(--bad); }
+.badge { padding:2px 8px; border-radius:99px; border:1px solid var(--line); font-size:12px; }
+.PAID,.ACTIVE,.ACCEPTED,.COMPLETED { color:var(--ok); } .FAILED,.CHARGEDBACK,.INVALID_SIGNATURE,.AMOUNT_MISMATCH,.WRONG_MERCHANT,.PAYMENT_FAILED,.ERROR,.BAD_REQUEST { color:var(--bad); } .PENDING,.DUPLICATE,.IGNORED,.CANCELED { color:var(--warn); }
+pre { background:var(--card); border:1px solid var(--line); padding:12px; border-radius:6px; overflow:auto; font-size:12px; }
+.row { display:flex; gap:8px; flex-wrap:wrap; }
